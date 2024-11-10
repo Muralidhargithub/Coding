@@ -1,27 +1,28 @@
 // leet 1.Check if a Given String is Palindrome or Not Without Finding the Reverse
 
-//import Foundation
-//public class Reverse{
-//    public static func reversed(_ arr:String) -> String{
-//        var charr=Array(arr)
-//        var left=0
-//        var right=charr.count-1
-//        while(left<right){
-//            var temp = charr[left]
-//            charr[left] = charr[right]
-//            charr[right] = temp
-//            left += 1
-//            right -= 1
-//        }
-//        let reversedstring=String(charr)
-//        if reversedstring == arr{
-//            return reversedstring
-//        }
-//        else{
-//            return "not same"
-//        }
-//    }
-//}
+import Foundation
+public class Reverse{
+    public static func reversed(_ arr:String) -> String{
+        var charr=Array(arr)
+        var left=0
+        var right=charr.count-1
+        while(left<right){
+            var temp = charr[left]
+            charr[left] = charr[right]
+            charr[right] = temp
+            left += 1
+            right -= 1
+        }
+        let reversedstring=String(charr)
+        if reversedstring == arr{
+            return reversedstring
+        }
+        else{
+            return "not same"
+        }
+    
+    }
+}
 //
 //let original="moom"
 //let reve = Reverse.reversed(original)
@@ -31,19 +32,19 @@
 // leet2 2.Remove Characters from the First String Which Are Present in the Second String
 
 
-//////func remove(from str1:String, second str2:String)->String{
-//////    var str3:String=""
-//////    for char in str1{
-//////        if !str2.contains(char){
-//////            str3.append(char)
-//////        }
-//////    }
-//////    return str3
-//////}
-//////
-//////let first="murali"
-//////let second="dhar"
-//////print(remove(from:first, second:second))
+func remove(from str1:String, second str2:String)->String{
+    var str3:String=""
+    for char in str1{
+        if !str2.contains(char){
+            str3.append(char)
+        }
+    }
+    return str3
+}
+
+let first="murali"
+let second="dhar"
+print(remove(from:first, second:second))
 ///
 ///
 ///
@@ -147,42 +148,42 @@
 ///
 ///leet3 Count the Number of Occurrences of Each Char in the Input String
 ///
-//func charCount(_ str1:String){
-//    var chardict = [Character:Int]()
-//    for char in str1{
-//        chardict[char,default:0] += 1
-//    }
-//    for (char,count) in chardict{
-//        print("\(char) occurs \(count) times")
-//    }
-//    
-//}
-//
-//charCount("muralidhar")
+func charCount(_ str1:String){
+    var chardict = [Character:Int]()
+    for char in str1{
+        chardict[char,default:0] += 1
+    }
+    for (char,count) in chardict{
+        print("\(char) occurs \(count) times")
+    }
+    
+}
+
+charCount("muralidhar")
 
 //leet4  Find the Most Recurring Char in the Input String
 
-//func recurring(_ str:String){
-//    var cnt=0
-//    
-//    var charact=[Character]()
-//    var charDict=[Character:Int]()
-//    for char in str{
-//        charDict[char,default:0] += 1
-//    }
-//    for (char,count) in charDict{
-//        if count>cnt{
-//            cnt=count
-//            charact = [char]
-//        }else if count == cnt{
-//            charact.append(char)
-//        }
-//    }
-//    print("\(charact) occurs \(cnt) times")
-//    
-//}
-//
-//recurring("muralidhar")
+func recurring(_ str:String){
+    var cnt=0
+    
+    var charact=[Character]()
+    var charDict=[Character:Int]()
+    for char in str{
+        charDict[char,default:0] += 1
+    }
+    for (char,count) in charDict{
+        if count>cnt{
+            cnt=count
+            charact = [char]
+        }else if count == cnt{
+            charact.append(char)
+        }
+    }
+    print("\(charact) occurs \(cnt) times")
+    
+}
+
+recurring("muralidhar")
 
 
 ////
@@ -323,18 +324,15 @@
 //
 //leet 5 Remove Duplicate Chars from the Input String
 //
-//func removeDuplicateChars(_ inputString:String)->String{
-//    var uniqueChars:Set<Character>=[]
-//    for char in inputString{
-//        if !uniqueChars.contains(char){
-//            uniqueChars.insert(char)
-//        }
+//func removeDuplicateChars(_ inputString: String) -> String {
+//    var uniqueChars: Set<Character> = []
+//    for char in inputString {
+//        uniqueChars.insert(char)
 //    }
 //    return String(uniqueChars)
 //}
-//
-//let res:String=removeDuplicateChars("muralidhar")
-//print("the non dulpicated character string \(res)")
+//let result = removeDuplicateChars("hello world")
+//print(result)
 
 // order is missing with the above code
 
